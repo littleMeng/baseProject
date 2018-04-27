@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context="com.genlot.lottery.userinfo.ui.AccountRegisterActivity">
+
+    <include layout="@layout/base_tool_bar"/>
+
+    <com.genlot.lottery.refreshlayout.RefreshLayoutHelper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y12"
+                android:layout_marginStart="@dimen/x10"
+                android:layout_marginEnd="@dimen/x10"
+                android:background="@drawable/background_shodow"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    style="@style/RegisterInput">
+                    <TextView
+                        android:text="用户名:"
+                        style="@style/RegisterText"/>
+                    <EditText
+                        android:id="@+id/et_account_num"
+                        android:hint="@string/input_phone_num"
+                        style="@style/RegisterEdit"/>
+                </RelativeLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <RelativeLayout
+                    style="@style/RegisterInput">
+
+                    <TextView
+                        android:text="验证码:"
+                        style="@style/RegisterText"/>
+                    <EditText
+                        android:id="@+id/et_identify_code"
+                        android:hint="输入验证码"
+                        style="@style/RegisterEdit"
+                        android:layout_alignParentEnd="false"
+                        android:layout_marginEnd="@dimen/x10"
+                        android:layout_toStartOf="@+id/btn_identify_code"/>
+                    <Button
+                        android:id="@+id/btn_identify_code"
+                        android:text="获取验证码"
+                        android:textColor="#1C7BF9"
+                        android:textSize="@dimen/x12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/y16"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/identify_code_shape"/>
+                </RelativeLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <RelativeLayout
+                    style="@style/RegisterInput">
+                    <TextView
+                        android:text="密  码:"
+                        style="@style/RegisterText"/>
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:hint="@string/input_pwd_hint"
+                        android:inputType="textPassword"
+                        style="@style/RegisterEdit"/>
+                </RelativeLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <RelativeLayout
+                    style="@style/RegisterInput">
+                    <TextView
+                        android:text="确认密码:"
+                        style="@style/RegisterText"/>
+                    <EditText
+                        android:id="@+id/et_confirm_password"
+                        android:hint="请再次输入密码"
+                        android:inputType="textPassword"
+                        style="@style/RegisterEdit"/>
+                </RelativeLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <RelativeLayout
+                    style="@style/RegisterInput">
+                    <TextView
+                        android:text="用户姓名:"
+                        style="@style/RegisterText"/>
+                    <EditText
+                        android:id="@+id/et_user_name"
+                        android:hint="请输入真实姓名"
+                        style="@style/RegisterEdit"/>
+                </RelativeLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <RelativeLayout
+                    style="@style/RegisterInput">
+                    <TextView
+                        android:text="站点名称:"
+                        style="@style/RegisterText"/>
+                    <EditText
+                        android:id="@+id/et_station_name"
+                        android:hint="不超过30个汉字"
+                        style="@style/RegisterEdit"/>
+                </RelativeLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <RelativeLayout
+                    style="@style/RegisterInput">
+                    <TextView
+                        android:text="机器编码:"
+                        style="@style/RegisterText"/>
+                    <EditText
+                        android:id="@+id/et_machine_code"
+                        android:hint="请输入10位数字编码"
+                        style="@style/RegisterEdit"/>
+                </RelativeLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <RelativeLayout
+                    style="@style/RegisterInput">
+                    <TextView
+                        android:text="站点区域:"
+                        style="@style/RegisterText"/>
+                    <LinearLayout
+                        android:id="@+id/ll_pick_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_province_city"
+                            android:text="广东省深圳市"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/x4"/>
+
+                        <ImageView
+                            android:layout_width="@dimen/x12"
+                            android:layout_height="@dimen/y12"
+                            android:src="@mipmap/ic_right"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <include layout="@layout/common_line"/>
+
+                <RelativeLayout
+                    style="@style/RegisterInput">
+                    <TextView
+                        android:text="详细地址:"
+                        style="@style/RegisterText"/>
+                    <EditText
+                        android:id="@+id/et_detailed_addr"
+                        android:hint="请输入真实地址"
+                        style="@style/RegisterEdit"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_commit_register"
+                android:text="提交审核"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y30"
+                android:layout_marginTop="@dimen/y60"
+                android:layout_marginStart="@dimen/x14"
+                android:layout_marginEnd="@dimen/x14"
+                android:gravity="center"
+                android:background="@drawable/common_btn_blue_shape"/>
+        </LinearLayout>
+    </com.genlot.lottery.refreshlayout.RefreshLayoutHelper>
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.genlot.lottery.userinfo.ui.LoginActivity">
+
+    <include layout="@layout/base_tool_bar"/>
+
+    <com.genlot.lottery.refreshlayout.RefreshLayoutHelper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="@dimen/x86"
+                    android:layout_height="@dimen/x86"
+                    android:src="@mipmap/ic_head"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/user_logo"
+                    android:layout_marginTop="@dimen/y60"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/iv_head"
+                    android:layout_marginStart="@dimen/x40"
+                    android:layout_marginEnd="@dimen/x40">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y28"
+                        android:layout_marginTop="@dimen/y60"
+                        android:orientation="horizontal"
+                        android:background="#6079f6"
+                        android:paddingStart="@dimen/x8"
+                        android:paddingEnd="@dimen/x8">
+
+                        <ImageView
+                            android:layout_width="@dimen/x18"
+                            android:layout_height="@dimen/x18"
+                            android:src="@mipmap/ic_user_account"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/account"/>
+
+                        <EditText
+                            android:id="@+id/et_input_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/x16"
+                            android:layout_gravity="center_vertical"
+                            android:hint="@string/input_phone_num"
+                            android:background="@null"
+                            android:textColorHint="#ADB9FE"
+                            android:cursorVisible="false"
+                            android:textSize="@dimen/x12"
+                            android:textColor="#ADB9FE"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y28"
+                        android:orientation="horizontal"
+                        android:background="#6079f6"
+                        android:layout_marginTop="2dp"
+                        android:paddingStart="@dimen/x8"
+                        android:paddingEnd="@dimen/x8">
+
+                        <ImageView
+                            android:layout_width="@dimen/x18"
+                            android:layout_height="@dimen/x18"
+                            android:src="@mipmap/ic_user_pwd"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/password"/>
+
+                        <EditText
+                            android:id="@+id/et_input_pwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/x16"
+                            android:hint="@string/input_pwd_hint"
+                            android:textColorHint="#ADB9FE"
+                            android:background="@null"
+                            android:cursorVisible="false"
+                            android:textSize="@dimen/x12"
+                            android:textColor="#ADB9FE"
+                            android:inputType="textPassword"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_forget_pwd"
+                        android:text="@string/forget_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/x12"
+                        android:textColor="#ADB9FE"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/y6"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/x40"
+                    android:layout_marginEnd="@dimen/x40"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/x15">
+
+                    <TextView
+                        android:id="@+id/tv_do_login"
+                        android:text="@string/login"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y30"
+                        android:gravity="center"
+                        android:textSize="@dimen/x14"
+                        android:textColor="@color/white"
+                        android:background="@drawable/login_selector"/>
+
+                    <TextView
+                        android:id="@+id/tv_account_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x34"
+                        android:layout_marginTop="@dimen/y30"
+                        android:gravity="center"
+                        android:text="@string/account_register"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/x12"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.genlot.lottery.refreshlayout.RefreshLayoutHelper>
+</LinearLayout>
